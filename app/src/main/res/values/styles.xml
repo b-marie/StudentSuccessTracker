@@ -11,6 +11,7 @@
     <style name="item_title" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="android:textSize">24dp</item>
         <item name="android:textAlignment">center</item>
+        <item name="android:layout_margin">10dp</item>
     </style>
 
     <style name="AppTheme.NoActionBar">

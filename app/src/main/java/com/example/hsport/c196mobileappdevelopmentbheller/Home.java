@@ -1,5 +1,6 @@
 package com.example.hsport.c196mobileappdevelopmentbheller;
 
+import android.app.Activity;
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
 import android.content.Intent;
@@ -8,6 +9,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import java.util.List;
@@ -51,6 +54,60 @@ public class Home extends AppCompatActivity {
                     getApplicationContext(),
                     R.string.empty_not_saved,
                     Toast.LENGTH_LONG).show();
+        }
+    }
+
+    public class goToEditTerms extends Activity {
+        protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+
+            setContentView(R.layout.activity_home);
+
+            final Button button = findViewById(R.id.editTermsButton);
+            button.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    // Code here executes on main thread after user presses button
+                    System.out.println("Go to edit terms was clicked");
+                    Intent intent = new Intent(goToEditTerms.this, TermEditActivity.class);
+                    startActivityForResult(intent, NEW_TERM_ACTIVITY_REQUEST_CODE);
+                }
+            });
+        }
+    }
+
+    public class goToCourses extends Activity {
+        protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+
+            setContentView(R.layout.activity_home);
+
+            final Button button = findViewById(R.id.goToCourses);
+            button.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    // Code here executes on main thread after user presses button
+                    System.out.println("Go to courses was clicked");
+//                    Intent intent = new Intent(goToCourses.this, TermEditActivity.class);
+//                    startActivityForResult(intent, NEW_TERM_ACTIVITY_REQUEST_CODE);
+                }
+            });
+        }
+    }
+
+    public class goToAssessments extends Activity {
+        protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+
+            setContentView(R.layout.activity_home);
+
+            final Button button = findViewById(R.id.goToAssessments);
+            button.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    // Code here executes on main thread after user presses button
+                    System.out.println("Go to assessments was clicked");
+//                    Intent intent = new Intent(goToCourses.this, TermEditActivity.class);
+//                    startActivityForResult(intent, NEW_TERM_ACTIVITY_REQUEST_CODE);
+                }
+            });
         }
     }
 
