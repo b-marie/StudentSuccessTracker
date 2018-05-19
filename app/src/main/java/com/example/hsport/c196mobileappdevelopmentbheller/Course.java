@@ -3,6 +3,7 @@ package com.example.hsport.c196mobileappdevelopmentbheller;
 import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
+import android.arch.persistence.room.TypeConverters;
 import android.support.annotation.NonNull;
 
 import java.lang.reflect.Array;
@@ -32,14 +33,18 @@ public class Course {
     @ColumnInfo(name = "course_status")
     private String courseStatus;
 
+    @TypeConverters(Converter.class)
     @ColumnInfo(name = "course_mentor_ids")
     private ArrayList<Mentor> mentorIDs;
 
+    @TypeConverters(Converter.class)
     @ColumnInfo(name = "course_assessment_ids")
     private ArrayList<Assessment> assessmentIDs;
 
     @ColumnInfo(name = "course_notes")
     private String courseNotes;
+
+    public Course() {}
 
     public Course(@NonNull int cID, @NonNull String cName, @NonNull String cStart, @NonNull String cEnd, @NonNull String cStatus, String cNotes, ArrayList<Mentor> mIDs, ArrayList<Assessment> aIDs) {
         this.courseID = cID;
@@ -83,6 +88,39 @@ public class Course {
     public ArrayList<Assessment> getAssessmentIDs() {
         return this.assessmentIDs;
     }
+
+    public void setCourseID(int cID) {
+        this.courseID = cID;
+    }
+
+    public void setCourseName(String cName) {
+        this.courseName = cName;
+    }
+
+    public void setCourseStart(String cStart) {
+        this.courseStart = cStart;
+    }
+
+    public void setCourseEnd(String cEnd) {
+        this.courseEnd = cEnd;
+    }
+
+    public void setCourseStatus(String cStatus) {
+        this.courseStatus = cStatus;
+    }
+
+    public void setCourseNotes(String cNotes) {
+        this.courseNotes = cNotes;
+    }
+
+    public void setMentorIDs(ArrayList<Mentor> mIDs) {
+        this.mentorIDs = mIDs;
+    }
+
+    public void setAssessmentIDs(ArrayList<Assessment> aIDs) {
+        this.assessmentIDs = aIDs;
+    }
+
 
 
 }

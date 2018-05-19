@@ -25,6 +25,8 @@ public class Assessment {
     @ColumnInfo(name = "assessment_due_date")
     private String assessmentDueDate;
 
+    public Assessment() {}
+
     public Assessment(@NonNull int aID, @NonNull String aName, @NonNull String aType, @NonNull String aDueDate) {
         this.assessmentID = aID;
         this.assessmentName = aName;
@@ -46,6 +48,22 @@ public class Assessment {
 
     public String getAssessmentDueDate() {
         return this.assessmentDueDate;
+    }
+
+    public void setAssessmentID(int aID) {
+        this.assessmentID = aID;
+    }
+
+    public void setAssessmentName(String aName) {
+        this.assessmentName = aName;
+    }
+
+    public void setAssessmentType(String aType) {
+        this.assessmentType = aType;
+    }
+
+    public void setAssessmentDueDate(String aDueDate) {
+        this.assessmentDueDate = aDueDate;
     }
 
 }

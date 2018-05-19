@@ -3,6 +3,7 @@ package com.example.hsport.c196mobileappdevelopmentbheller;
 import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
+import android.arch.persistence.room.TypeConverters;
 import android.support.annotation.NonNull;
 
 import java.util.ArrayList;
@@ -27,9 +28,11 @@ public class Term {
     @ColumnInfo(name = "term_end")
     private String termEnd;
 
-    @NonNull
+    @TypeConverters(Converter.class)
     @ColumnInfo(name = "term_course_ids")
     private ArrayList<Course> courseIDs;
+
+    public Term() {}
 
     public Term(@NonNull int tID, @NonNull String tName, @NonNull String tStart, @NonNull String tEnd, ArrayList<Course> cIDs) {
         this.termID = tID;
@@ -57,6 +60,26 @@ public class Term {
 
     public ArrayList<Course> getCourseIDs() {
         return this.courseIDs;
+    }
+
+    public void setTermID(int tID) {
+        this.termID = tID;
+    }
+
+    public void setTermName(String tName) {
+        this.termName = tName;
+    }
+
+    public void setTermStart(String tStart) {
+        this.termStart = tStart;
+    }
+
+    public void setTermEnd(String tEnd) {
+        this.termEnd = tEnd;
+    }
+
+    public void setCourseIDs(ArrayList<Course> cIDs) {
+        this.courseIDs = cIDs;
     }
 
 

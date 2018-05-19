@@ -3,9 +3,11 @@ package com.example.hsport.c196mobileappdevelopmentbheller;
 import android.arch.persistence.room.Database;
 import android.arch.persistence.room.Room;
 import android.arch.persistence.room.RoomDatabase;
+import android.arch.persistence.room.TypeConverters;
 import android.content.Context;
 
-@Database(entities = {Term.class, Course.class, Mentor.class, Assessment.class}, version = 1)
+@Database(entities = {Term.class, Course.class, Mentor.class, Assessment.class}, version = 1, exportSchema = false)
+@TypeConverters({Converter.class})
 public abstract class StudentSuccessDatabase extends RoomDatabase {
     public abstract TermDao termDao();
     public abstract CourseDao courseDao();

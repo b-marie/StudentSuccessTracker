@@ -25,6 +25,8 @@ public class Mentor {
     @ColumnInfo(name = "mentor_email")
     private String mentorEmail;
 
+    public Mentor() {}
+
     public Mentor(@NonNull int mID, @NonNull String mName, @NonNull String mPhone, @NonNull String mEmail) {
         this.mentorID = mID;
         this.mentorName = mName;
@@ -46,6 +48,22 @@ public class Mentor {
 
     public String getMentorEmail() {
         return this.mentorEmail;
+    }
+
+    public void setMentorID(int mID) {
+        this.mentorID = mID;
+    }
+
+    public void setMentorName(String mName) {
+        this.mentorName = mName;
+    }
+
+    public void setMentorPhoneNumber(String mPhoneNumber) {
+        this.mentorPhoneNumber = mPhoneNumber;
+    }
+
+    public void setMentorEmail(String mEmail) {
+        this.mentorEmail = mEmail;
     }
 
 }
