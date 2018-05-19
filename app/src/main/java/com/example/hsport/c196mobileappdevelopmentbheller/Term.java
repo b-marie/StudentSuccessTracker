@@ -34,8 +34,7 @@ public class Term {
 
     public Term() {}
 
-    public Term(@NonNull int tID, @NonNull String tName, @NonNull String tStart, @NonNull String tEnd, ArrayList<Course> cIDs) {
-        this.termID = tID;
+    public Term(@NonNull String tName, @NonNull String tStart, @NonNull String tEnd, ArrayList<Course> cIDs) {
         this.termName = tName;
         this.termStart = tStart;
         this.termEnd = tEnd;

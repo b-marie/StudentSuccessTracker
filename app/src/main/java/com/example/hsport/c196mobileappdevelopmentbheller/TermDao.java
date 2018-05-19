@@ -24,6 +24,9 @@ public interface TermDao {
     @Update
     void update (Term term);
 
+    @Query("DELETE FROM term_table")
+    void deleteAllTerms();
+
     @Query("SELECT * from term_table")
     LiveData<List<Term>> getAllTerms();
 

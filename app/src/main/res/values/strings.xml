@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Student Success</string>
+    <string name="hint_term_name">Term Name...</string>
+    <string name="hint_term_start">Term Start...</string>
+    <string name="hint_term_end">Term End...</string>
+    <string name="button_save">Save</string>
+    <string name="empty_not_saved">Entry not saved because it is empty.</string>
+    <string name="title_activity_term_edit">TermEditActivity</string>
 </resources>

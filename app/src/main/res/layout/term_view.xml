@@ -4,8 +4,9 @@
     android:layout_height="wrap_content">
 
     <TextView
+        style="@style/item_title"
         android:id="@+id/itemTermView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
-        <!--style="@style/item_title" />-->
+
 </LinearLayout>
